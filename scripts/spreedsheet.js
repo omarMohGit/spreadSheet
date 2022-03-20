@@ -1,25 +1,27 @@
 $(document).ready(function () {
     function rowSel() {
         $("tr").click(function () {
-            $(this).addClass('highlighted');
+            $(this).toggleClass("highlighted");
         })
     }
 
     function colSel() {
         $("th").click(function () {
-            $(this).addClass('highlighted');
+            var column = $(this).attr('data-column');
+            $(' td[data-column=' + column + ']').toggleClass('highlighted');
         })
     }
 
     function deselect() {
         $("td").click(function () {
             $("td").each(function () {
-                $(this).removeClass('highlighted');
-
+                $(this).toggleClass('unhighlighted');
             })
+
         })
     }
-    deselect()
+
     colSel()
     rowSel()
+    deselect()
 })
