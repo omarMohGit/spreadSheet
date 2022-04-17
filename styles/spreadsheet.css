@@ -35,6 +35,7 @@ td {
 
 
 
+
 .axis {
     font: 10px sans-serif;
 }
@@ -49,4 +50,8 @@ td {
 #graphy {
     text-align: center;
 
+}
+
+.sup {
+    background-color: red;
 }
